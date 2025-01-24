@@ -1,0 +1,2 @@
+zawadi-backend/journal/WiredTigerLog* filter=lfs diff=lfs merge=lfs -text
+zawadi-backend/journal/WiredTigerPreplog* filter=lfs diff=lfs merge=lfs -text
