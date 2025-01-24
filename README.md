@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Welcome to ZAWADI
+
+<p>This app allows users to store memories from their baby's early years. There is also a social media component where users can share and comment on stories.</p>
+## Overview:
+* React Front-End: We'll use React to build the user interface (UI). The app will have a header, navigation bar, sections for adding child profiles, tracking milestones, uploading media, and more.
+* Node.js Backend (Express): We’ll use Express.js to handle the API requests, handle user authentication, send email reminders, store data in MongoDB, and generate PDFs.
+* MongoDB: Use of MongoDB to store user profiles, child profiles, milestones, and media.
+* User authentication with login/logout functionality
+* Sending email reminders for appointments, milestones
+* Uploading media (photos/videos)
+* Generating PDF for child profiles
+* Deployment to a hosting platform
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
