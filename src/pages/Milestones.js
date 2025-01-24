@@ -1,41 +1,38 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Milestones = () => {
-  const [milestone, setMilestone] = useState({
-    date: '',
-    description: '',
-  });
+  const [milestones, setMilestones] = useState([]);
 
-  const handleChange = (e) => {
-    setMilestone({
-      ...milestone,
-      [e.target.name]: e.target.value,
-    });
-  };
+  useEffect(() => {
+    const token = localStorage.getItem('token'); // Retrieve the token
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // API call to add the milestone
-  };
+    if (token) {
+      fetch('http://localhost:5000/api/milestones', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`, // Include token in header
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => setMilestones(data)) // Set data to state
+        .catch((error) => console.error('Error fetching milestones:', error));
+    } else {
+      console.log('No token found. Please log in.');
+    }
+  }, []);
 
   return (
-    <div className="milestones">
-      <h2>Baby Milestones</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="date"
-          name="date"
-          value={milestone.date}
-          onChange={handleChange}
-        />
-        <textarea
-          name="description"
-          placeholder="Milestone Description"
-          value={milestone.description}
-          onChange={handleChange}
-        />
-        <button type="submit">Add Milestone</button>
-      </form>
+    <div>
+      <h2>Your Milestones</h2>
+      <ul>
+        {milestones.map((milestone) => (
+          <li key={milestone._id}>
+            <p>{milestone.description}</p>
+            <p>Date: {new Date(milestone.date).toLocaleDateString()}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
