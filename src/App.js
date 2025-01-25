@@ -7,7 +7,7 @@ import BabyProfile from "./pages/BabyProfile";
 import Milestones from "./pages/Milestones";
 import UploadMedia from "./pages/UploadMedia";
 import Login from "./pages/Login";  // Import the Login component
-import './App.css';
+import './styles.css';
 
 function App() {
   return (
