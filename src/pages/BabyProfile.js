@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './BabyProfile.css';
 
 const BabyProfile = () => {
   const [babyProfiles, setBabyProfiles] = useState([]);
