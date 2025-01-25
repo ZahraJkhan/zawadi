@@ -1,0 +1,43 @@
+/* src/pages/UploadMedia.css */
+.upload-media {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-media h2 {
+  text-align: center;
+  color: #3498db;
+}
+
+.upload-media label {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.upload-media input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.upload-media button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  margin-top: 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.upload-media button:hover {
+  background-color: #2980b9;
+}
