@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './UploadMedia.css';
 
 const UploadMedia = () => {
   const [media, setMedia] = useState(null);
